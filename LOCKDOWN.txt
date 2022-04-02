@@ -34,6 +34,7 @@ GOTO LOOP
 PAUSE
 ==========VBS-CODES==========
 wscript.echo "Hello"
+vbInformation "Window Title"
 wscript.quit
 if
 elseif
