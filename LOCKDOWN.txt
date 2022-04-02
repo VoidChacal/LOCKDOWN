@@ -1,4 +1,5 @@
-SHUTDOWN -i =======TEST-FASE=======
+==========DOS/CMD-CODES==========
+SHUTDOWN -i
 DATE
 TIME
 MSG * "MESSAGE"
@@ -30,3 +31,16 @@ RD "PASTA"
 :LOOP
 GOTO LOOP
 %RANDOM%
+PAUSE
+==========VBS-CODES==========
+wscript.echo "Hello"
+wscript.quit
+if
+end if
+----------VARIÁVEIS_EXEMPLOS----------
+A = 97
+B = 71
+----------DECLARAÇÃO----------
+Dim F
+F = (A-B) * 2
+MsgBox "O RESULTADO É: " &F
