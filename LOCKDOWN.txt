@@ -36,6 +36,7 @@ PAUSE
 wscript.echo "Hello"
 wscript.quit
 if
+elseif
 end if
 ----------VARIÁVEIS_EXEMPLOS----------
 A = 97
