@@ -48,3 +48,14 @@ B = 71
 Dim F
 F = (A-B) * 2
 MsgBox "O RESULTADO É: " &F
+----------CONFIGURAÇÕES_DO_MsgBox----------
+//vbCritical = Ícone de erro
+//vbOKOnly = Apenas o botão OK
+//vbOKCancel = Apenas os botões Ok e Cancelar
+//vbYesNoCancel = Apenas os botões Sim, Não e Cancelar
+//vbYesNo = Apenas os botões Sim e Não
+//vbQuestion =  Ícone Consulta de Aviso.
+//vbExclamation = Ícone de Mensagem de Aviso.
+//vbInformation = Ícone de Mensagem Informativa
+//title = "Define o Titulo da mensagem"
+//Msg = "Define messagem"
