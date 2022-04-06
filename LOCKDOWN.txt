@@ -58,4 +58,4 @@ MsgBox "O RESULTADO É: " &F
 //vbExclamation = Ícone de Mensagem de Aviso.
 //vbInformation = Ícone de Mensagem Informativa
 //title = "Define o Titulo da mensagem"
-//Msg = "Define messagem"
+//Msg = "Define menssagem"
