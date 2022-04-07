@@ -59,3 +59,4 @@ MsgBox "O RESULTADO É: " &F
 //vbInformation = Ícone de Mensagem Informativa
 //title = "Define o Titulo da mensagem"
 //Msg = "Define menssagem"
+//& vbNewLine & = Nova Linha
