@@ -61,3 +61,11 @@ MsgBox "O RESULTADO É: " &F
 //title = "Define o Titulo da mensagem"
 //Msg = "Define menssagem"
 //& vbNewLine & = Nova Linha
+----------MsgBox_Values----------
+//vbOK = "OK" \\ *1*
+//vbCancel = "Cancel" \\ *2*
+//vbAbort	= "Abort" \\ *3*
+//vbRetry = "Retry" \\ *4*
+//vbIgnore = "Ignore" \\ *5*
+//vbYes	= "Yes" \\ *6*
+ vbNo	= "No" \\ *7*
