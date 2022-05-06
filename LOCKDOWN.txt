@@ -64,7 +64,7 @@ MsgBox "O RESULTADO É: " &F
 ----------MsgBox_Values----------
 //vbOK = "OK" \\ *1*
 //vbCancel = "Cancel" \\ *2*
-//vbAbort	= "Abort" \\ *3*
+//vbAbort = "Abort" \\ *3*
 //vbRetry = "Retry" \\ *4*
 //vbIgnore = "Ignore" \\ *5*
 //vbYes	= "Yes" \\ *6*
