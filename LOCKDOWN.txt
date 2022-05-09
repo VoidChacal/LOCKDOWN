@@ -38,6 +38,7 @@ PAUSE
 ==========VBS-CODES==========
 wscript.echo "Hello"
 vbInformation "Window Title"
+objShell.ShellExecute "C:\Users\("name")\Desktop\teste.bat"
 wscript.quit
 if
 elseif
