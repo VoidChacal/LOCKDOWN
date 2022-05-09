@@ -10,7 +10,7 @@ If intMessage = vbYes Then
 	vbYesNo + vbQuestion, "LOCKDOWN")
 
 if intMessage = vbYes Then
-Set MyFile = fso.CreateTextFile("c:\users\gamer\desktop\teste2.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\("teste")\desktop\teste2.bat", True)
 
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("color 0a")
@@ -32,7 +32,7 @@ End If
 
 
 if intMessage = vbYes Then
-	objShell.run"c:\users\gamer\desktop\teste2.bat"	
+	objShell.run"c:\users\("teste")\desktop\teste2.bat"	
 
 
 End If
