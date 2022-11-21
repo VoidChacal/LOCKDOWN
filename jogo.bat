@@ -82,3 +82,4 @@ echo off
 echo %DEL% > "%~2"
 findstr /v /a:%1 /R "^$" "%~2" nul
 del "%~2" > nul 2>&1
+REM https://stackoverflow.com/questions/21660249/how-do-i-make-one-particular-line-of-a-batch-file-a-different-color-then-the-oth#:~:text=Just%20change%20the%20parameter%3A%20call,my%20answer%20to%20show%20you.
