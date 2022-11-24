@@ -237,7 +237,7 @@ if %resposta%==3 goto Iniciar_9
 if %resposta%==4 goto Errou
 if %resposta%==5 goto Errou
 :Iniciar_9
-color 2
+color d
 cls
 echo.
 echo    *************************************************************************
@@ -260,7 +260,7 @@ if %resposta%==3 goto Errou
 if %resposta%==4 goto Errou
 if %resposta%==5 goto Errou
 :Iniciar_10
-color 2
+color c
 cls
 echo.
 echo    ***************************************************************************************
@@ -271,11 +271,11 @@ echo    ***                                                                   	 
 echo    ***************************************************************************************	   
 echo.
 call :ColorText 4 "   Digite o numero da opcao"
-call :ColorText 7 "1) 2000"
-call :ColorText 7 "2) 2006"
-call :ColorText 7 "3) 2001"
-call :ColorText 7 "4) 2002"
-call :ColorText 7 "5) 2008" 
+call :ColorText 5 "1) 2000"
+call :ColorText 5 "2) 2006"
+call :ColorText 5 "3) 2001"
+call :ColorText 5 "4) 2002"
+call :ColorText 5 "5) 2008" 
 set /p resposta=Resposta:
 if %resposta%==1 goto Errou
 if %resposta%==2 goto Errou
@@ -283,27 +283,55 @@ if %resposta%==3 goto Errou
 if %resposta%==4 goto Iniciar_11
 if %resposta%==5 goto Errou
 :Iniciar_11
-color 2
+color c
 cls
 echo.
 echo    *************************************************************************
 echo    ***                                        			         *** 
 echo    ***         			Pergunta 10                              ***  
-echo    ***			A funcao principal do PHP e      		 ***
+echo    ***		    O Banco de dados e mais proximo de      		 ***
 echo    ***                                                                   ***	   
 echo    *************************************************************************	   
 echo.
 call :ColorText 4 "   Digite o numero da opcao"
-call :ColorText 7 "1) Script para facilitar o codigo do CSS"
-call :ColorText 7 "2) Exibir mensagens ou alertas no HTML"
-call :ColorText 7 "3) Estilizar o HTML"
-call :ColorText 7 "4) Conectar-se ao servidor"
-call :ColorText 7 "5) Script para compactar o codigo do HTML" 
+call :ColorText 3 "1) Array com controle de dados"
+call :ColorText 3 "2) Um sistema de controle de class"
+call :ColorText 3 "3) Tabelas bonitas"
+call :ColorText 3 "4) Um sistema de controle de Array"
+call :ColorText 3 "5) Uma agenda de dados" 
 set /p resposta=Resposta:
-if %resposta%==1 goto Errou
+if %resposta%==1 goto Iniciar_12
 if %resposta%==2 goto Errou
 if %resposta%==3 goto Errou
-if %resposta%==4 goto Iniciar_12
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Errou
+:Iniciar_12
+color 97
+cls
+echo.
+echo    *************************************************************************
+echo    ***                                        			         *** 
+echo    ***         			Pergunta 11                              *** 
+echo    ***                          Esse codigo e um:                        ***
+echo    ***                                                                   *** 
+echo    ***	     while($rows = mysqli_fetch_array($res)){                    ***    
+echo    ***            	   $result[$a] = $rows['cd'];                    ***
+echo    ***            			$a++;                            ***
+echo    ***            		}		                         ***
+echo    ***                                                                   ***	   
+echo    *************************************************************************	   
+echo.
+call :ColorText 94 "   Digite o numero da opcao"
+call :ColorText 3 "1) Deletar uma variavel"
+call :ColorText 3 "2) Sistema de conta"
+call :ColorText 3 "3) Armazenar uma variavel"
+call :ColorText 3 "4) Armazenar dados"
+call :ColorText 3 "5) Loop" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Iniciar_12
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
 if %resposta%==5 goto Errou
 :ColorText
 echo off
