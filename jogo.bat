@@ -321,18 +321,280 @@ echo    ***            		}		                         ***
 echo    ***                                                                   ***	   
 echo    *************************************************************************	   
 echo.
-call :ColorText 94 "   Digite o numero da opcao"
-call :ColorText 3 "1) Deletar uma variavel"
-call :ColorText 3 "2) Sistema de conta"
-call :ColorText 3 "3) Armazenar uma variavel"
-call :ColorText 3 "4) Armazenar dados"
-call :ColorText 3 "5) Loop" 
+call :ColorText 4 "   Digite o numero da opcao"
+call :ColorText 7 "1) Deletar uma variavel"
+call :ColorText 7 "2) Sistema de conta"
+call :ColorText 7 "3) Armazenar uma variavel"
+call :ColorText 7 "4) Armazenar dados"
+call :ColorText 7 "5) Loop" 
 set /p resposta=Resposta:
-if %resposta%==1 goto Iniciar_12
+if %resposta%==1 goto Iniciar_13
 if %resposta%==2 goto Errou
 if %resposta%==3 goto Errou
 if %resposta%==4 goto Errou
 if %resposta%==5 goto Errou
+:Iniciar_13
+color d9
+cls
+echo.
+echo    *************************************************************************
+echo    ***                                        			         *** 
+echo    ***         			Pergunta 12
+echo    ***                           Praque serva a                               *** 
+echo    ***                             $_SESSION                         ***
+echo    ***                                                                   *** 	   
+echo    *************************************************************************	   
+echo.
+call :ColorText 94 "   Digite o numero da opcao"
+call :ColorText 1 "1) Uma variavel comum "
+call :ColorText 1 "2) Codigo para criar tabelas"
+call :ColorText 1 "3) Um simples codigo nao importante"
+call :ColorText 1 "4) Array contendo variaveis de sessao"
+call :ColorText 1 "5) Nome de uma function" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Iniciar_14
+if %resposta%==5 goto Errou
+:Iniciar_14
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 13				       ***
+echo    ***      usada originalmente apenas para o desenvolvimento de aplicacoes    ***
+echo    ***		  presentes e atuantes no lado do servidor, 		       ***
+echo    ***                   capazes de gerar conteudo dinâmico na                 ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) Notepad "
+call :ColorText d "2) Txt"
+call :ColorText d "3) Microsoft World"
+call :ColorText d "4) Worldpad"
+call :ColorText d "5) World Wide Web" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Iniciar_15
+:Iniciar_15
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 14				       ***
+echo    ***   Existem iniciativas para utilizar o PHP como linguagem de programação ***
+echo    ***		  	de sistemas fixos. A mais notável é 		       ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) IMAP"
+call :ColorText d "2) HTTP"
+call :ColorText d "3) PHP-GTK"
+call :ColorText d "4) XML-RPC"
+call :ColorText d "5) SOAP" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Iniciar_16
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Errou
+:Iniciar_16
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 15				       ***
+echo    ***   Existem iniciativas para utilizar o PHP como linguagem de programação ***
+echo    ***		  	de sistemas fixos. A mais notável é 		       ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) IMAP"
+call :ColorText d "2) HTTP"
+call :ColorText d "3) PHP-GTK"
+call :ColorText d "4) XML-RPC"
+call :ColorText d "5) SOAP" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Iniciar_17
+:Iniciar_17
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 16				       ***
+echo    ***   		   A atualizacao versao 7.1 cabou trazendo   		    ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) Tipo de retorno void, modificadores de visibilidade de constante de classe."
+call :ColorText d "2) Parâmetro de objeto e declaração de tipo de retorno"
+call :ColorText d "3) Zend Engine 3"
+call :ColorText d "4) Sintaxe flexível Heredoc e Nowdoc"
+call :ColorText d "5) Suporte para geradores, blocos finally para tratamento de exceções, OpCache" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Iniciar_18
+:Iniciar_18
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 17				       ***
+echo    ***   		   A atualizacao versao 7.1 cabou trazendo   		    ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) Tipo de retorno void, modificadores de visibilidade de constante de classe."
+call :ColorText d "2) Parâmetro de objeto e declaração de tipo de retorno"
+call :ColorText d "3) Zend Engine 3"
+call :ColorText d "4) Sintaxe flexível Heredoc e Nowdoc"
+call :ColorText d "5) Suporte para geradores, blocos finally para tratamento de exceções, OpCache" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Iniciar_19
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Errou
+:Iniciar_19
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 18				       ***
+echo    ***   		   O que aconteceu em junho de 2004 no PHP   		    ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) sintaxe chamável de primeira classe, new em inicializadores"
+call :ColorText d "2) Propriedades tipadas 2.0, pre-carregamento"
+call :ColorText d "3) Compilacao Just-In-Time (JIT)"
+call :ColorText d "4) Foi adicionado um melhor sistema de analise sintatica "
+call :ColorText d "5) novo modelo de orientacao a objeto" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Iniciar_20
+:Iniciar_20
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 19				       ***
+echo    ***   		   Trata-se de uma linguagem extremamente   		    ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) Modularizada"
+call :ColorText d "2) Complicada"
+call :ColorText d "3) Confusa"
+call :ColorText d "4) Abstruso"
+call :ColorText d "5) Simples" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Iniciar_21
+if %resposta%==2 goto Errou
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Errou
+:Iniciar_21
+color 80
+cls
+echo.
+echo    *******************************************************************************
+echo    ***                                        			               *** 
+echo    ***         			Pergunta 20				       ***
+echo    ***   		   Em que ano foi lancada ao publico   		            ***
+echo    ***                                                                         *** 	   
+echo    *******************************************************************************	   
+echo.
+call :ColorText 04 "   Digite o numero da opcao"
+call :ColorText d "1) 1994"
+call :ColorText d "2) 1995"
+call :ColorText d "3) 2000"
+call :ColorText d "4) 1996"
+call :ColorText d "5) 1998" 
+set /p resposta=Resposta:
+if %resposta%==1 goto Errou
+if %resposta%==2 goto fim
+if %resposta%==3 goto Errou
+if %resposta%==4 goto Errou
+if %resposta%==5 goto Errou
+:fim
+cls
+echo 	*   	 *      *******************
+echo		*	 * 	*		  *
+echo		*	 *	*   **        **  *
+echo		*	 *  	*		  *
+echo	 	*	 *	*     ********	  *
+echo		*	 *	*		  *
+echo		**********	*******************
+echo		     *			  *
+echo		     *			  *
+echo		     * 			  *		       
+echo	             *******************************************
+echo					  *		       *
+echo					  *		       *
+echo					  *		       *
+echo					  *		   **********
+echo					 * *		   *	    *
+echo					*   *		   *	    *
+echo				       *     *		   *	    *
+echo				      *       *		   *	    *
+echo				     *	       *	   *	    *
+echo				    *		*	   *	    *
+pause
+goto fim2
+:fim2
+cls
+echo 		        *******************	   *	    *
+echo		        	*		  *	   *	    *
+echo		        	*   **        **  *	   *	    *
+echo		         	*		  *	   *	    *
+echo	 	        	*     ********	  *	   *	    *
+echo		        	*		  *	   *	    *
+echo		        	*******************	   **********
+echo		     			  *		       *
+echo		     			  *		       *
+echo		      			  *		       *
+echo	             *******************************************
+echo		     *			  *		       
+echo		     *			  *		       
+echo		     *			  *		       
+echo		**********		  *		   
+echo		*	 *		 * *		   	    
+echo		*	 *		*   *		   	    
+echo		*	 *	       *     *		   	    
+echo		*	 *	      *       *		   	    
+echo		*	 *	     *	       *	   	    
+echo		*	 *	    *		*
+pause
+goto fim
 :ColorText
 echo off
 echo %DEL% > "%~2"
