@@ -14,7 +14,6 @@ cd/
 del *.log /a /s /q /f
 pause
 REM parte 3
-echo Batch File By zJu4nn
 net stop wuauserv
 net stop UsoSvc
 rd /s /q C:\Windows\SoftwareDistribution
