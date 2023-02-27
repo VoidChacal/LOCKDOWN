@@ -5,11 +5,11 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 )
 :menu
 @echo.
-@echo    *************************************************************************
-@echo    ***                                        			         *** Nota: Provavelmente ha um
-@echo    ***         Sistema batchfile de limpeza de computadores	       	 ***      programa melhor que este
-@echo    ***                                                                   ***	  
-@echo    *************************************************************************	 
+@echo    *************************************************************************   Nota: Provavelmente ha um
+@echo    ***                                        			         ***        programa melhor que este
+@echo    ***         Sistema batchfile de limpeza de computadores	       	 ***      
+@echo    ***                                                                   ***   Aviso: Executar o arquivo 	  
+@echo    *************************************************************************         no modo administrador 
 @echo.
 call :ColorText 0c "1 Apagar arquivos temporarios"
 call :ColorText 0c "2 Apagar Logs"
@@ -20,7 +20,12 @@ set /p resposta=
  ) else if %resposta%==3 ( goto Distribution 
  ) else ( 
  cls
- echo valor invalido
+ echo.
+ call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
+ call :ColorText 02 "   &&&                                                                    &&& "
+ call :ColorText 02 "   &&&                         Valor Invalido                             &&& "
+ call :ColorText 02 "   &&&                                                                    &&& "	  
+ call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
  goto menu
  )
 :Temporarios
