@@ -15,9 +15,14 @@ call :ColorText 0c "1 Apagar arquivos temporarios"
 call :ColorText 0c "2 Apagar Logs"
 call :ColorText 0c "3 Distribution"
 set /p resposta=
-if %resposta%==1 goto Temporarios
-if %resposta%==2 goto logs
-if %resposta%==3 goto Distribution
+ if %resposta%==1 ( goto Temporarios
+ ) else if %resposta%==2 ( goto logs 
+ ) else if %resposta%==3 ( goto Distribution 
+ ) else ( 
+ cls
+ echo valor invalido
+ goto menu
+ )
 :Temporarios
 RD /S /Q %temp%
 MKDIR %temp%
