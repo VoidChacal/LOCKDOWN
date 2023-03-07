@@ -21,18 +21,21 @@ OutStream.Close
 shell.Run ("""" & Enterfile & """")
 	Do While rep2<rep
 		Text = InputBox(message,Title,DefaultValueText,XPos,YPos)
-		if Xpos < 15000 then
-		XPos = 	XPos+19000
+		if Xpos = 0 then
+		XPos = 	XPos+23000
 		End if
-		if Ypos < 700 then
-		YPos = YPos+1000
+		if XPos = 24000 then
+		YPos = YPos + 13000
 		End if
-		if XPos = 58000 then
-		XPos = XPos-18000
+		if XPos = 23000 then
+		YPos = YPos + 13000
 		End if
-		if YPos > 20000 then
-		YPos = YPos-8000
-		End if				
+		if YPos = 13000 then
+		YPos = YPos + 1000
+		End if
+		if Ypos = 14000 then
+		XPos = XPos - 23000
+		End if			
 		rep2=rep2+1
 		Loop
 fso.DeleteFile EnterFile
