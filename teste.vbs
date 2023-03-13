@@ -22,10 +22,11 @@ shell.Run ("""" & Enterfile & """")
 	Do While rep2<rep
 		Text = InputBox(message,Title,DefaultValueText,XPos,YPos)
 		if Xpos = 0 then
-		XPos = 	XPos+23000
+		XPos = 	XPos+18000
 		End if
-		if XPos = 24000 then
-		YPos = YPos + 13000
+		if XPos = 18000 then
+		YPos = YPos + 10000
+		Xpos = XPos + 1000
 		End if
 		if XPos = 23000 then
 		YPos = YPos + 13000
