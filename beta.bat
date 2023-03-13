@@ -12,12 +12,8 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 @echo    *************************************************************************         no modo administrador 
 @echo.
 call :ColorText 0c "1 Apagar arquivos temporarios"
-call :ColorText 0c "2 Apagar Logs"
-call :ColorText 0c "3 Distribution"
 set /p resposta=
  if %resposta%==1 ( goto Temporarios
- ) else if %resposta%==2 ( goto logs 
- ) else if %resposta%==3 ( goto Distribution 
  ) else ( 
  cls
  echo.
@@ -37,19 +33,10 @@ RD /S /Q C:\Windows\Temp
 MKDIR C:\Windows\Temp
 takeown /f "C:\Windows\Temp" /r /d y
 takeown /f %temp% /r /d y
-pause
-cls
-goto menu
-:logs
 REM parte 2
 cd/
 @echo
 del *.log /a /s /q /f
-pause
-cls
-goto menu
-REM parte 3
-:Distribution
 net stop wuauserv
 net stop UsoSvc
 rd /s /q C:\Windows\SoftwareDistribution
