@@ -11,13 +11,21 @@ Enterfile = "C:\#temp#.vbs"
 Set shell = CreateObject("Wscript.Shell")
 	T = "Set Shell = WScript.CreateObject( """ & _
                	"WScript.Shell" & """ )" & vbnewline
+
 ' Não funciona? Do While rep2 < 10
-if rep2 < 10 then
+Do while rep2<10  
+
+	T = T & "wscript.sleep " & delay & " * 1000" & vbcrlf
+	T = T & "Shell.sendkeys vbCr" & vbcrlf
+
 	T = T & "wscript.sleep " & delay & " * 1000" & vbcrlf
 	T = T & "Shell.sendkeys vbCr" & vbcrlf
 	
-End if
+	T = T & "wscript.sleep " & delay & " * 1000" & vbcrlf
+	T = T & "Shell.sendkeys vbCr" & vbcrlf
+Loop	
 	T = T & "wscript.quit"
+
 ' Não funciona? Loop
  'writes temp file
 Set OutStream=fso.CreateTextFile(EnterFile,True)
@@ -39,6 +47,24 @@ OutStream.Close
 		
 			YPos = YPos - 5000
 			XPos = Xpos - 2000
+			End if
+			
+			if rep2 = 3 then
+		
+			YPos = YPos + 7000
+			XPos = Xpos + 5000
+			End if
+
+			if rep2 = 4 then
+		
+			YPos = YPos - 9000
+			XPos = Xpos - 8000
+			End if
+
+			if rep2 = 5 then
+		
+			YPos = YPos + 5000
+			XPos = Xpos - 10000
 			End if
 			rep2=rep2+1
 			Loop
