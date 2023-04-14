@@ -41,6 +41,15 @@ net stop wuauserv
 net stop UsoSvc
 rd /s /q C:\Windows\SoftwareDistribution
 md C:\Windows\SoftwareDistribution
+@echo.
+@echo    *************************************************************************  
+@echo    ***                                        			         ***   
+@echo    ***         		Executando Limpeza Profunda	       	 	 ***      
+@echo    ***                                                                   ***    	  
+@echo    *************************************************************************  
+@echo.
+takeown /f "C:\TEMP"
+del *.log /a /s /q /f
 pause
 cls
 goto menu
