@@ -1,7 +1,7 @@
 Title = "Bola do Rodolfo"
 DefaultValueText = "Bola do Rodolfo com VBScript"
 message = "Bola do Rodolfo"
-rep = 200
+rep = 470
 XPos = 0 
 YPos = 0
 delay = 0 'seconds
@@ -26,12 +26,24 @@ OutStream.Close
 			
 			if rep2<100 then		
 			XPos = XPos+200
+			rep2=rep2+1
 			End if
-			
-			if rep2<99 then
+		
+			if rep2>99 then
 			Ypos = Ypos+200
+			rep2 = rep2+1
 			End if
 
-			rep2=rep2+1
+			if rep2>160 then
+			Ypos = Ypos-200
+			Xpos = Xpos-400
+			rep2 = rep2+1
+			End if
+
+			if rep2>270 then
+			Ypos = Ypos-200
+			Xpos = Xpos+400
+			rep2 = rep2+1
+			End if
 			Loop
 fso.DeleteFile EnterFile
