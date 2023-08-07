@@ -14,9 +14,10 @@ for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1)
 call :ColorText 0c "1 Apagar arquivos temporarios"
 call :ColorText 0c "2 Ativacao do Windows"
 set /p resposta=
-if %resposta%==2( goto Activation )
-if %resposta%==1( goto limpeza )
-:limpeza
+2>NUL CALL :CASE_%resposta%
+if %resposta%==2( goto Activation 
+) else if %resposta%==1( goto limpeza )
+:CASE_1
 @echo.
 @echo    *************************************************************************   
 @echo    ***                                        			         ***        
@@ -28,11 +29,7 @@ call :ColorText 0c "1 Apagar arquivos temporarios"
 set /p resposta2=
  if %resposta2%==1 ( goto Temporarios
  )
-REM " SKILL ISSUE"
-if %resposta2%==2 ( goto Activation
- ) 
-REM " SKILL ISSUE"
-else ( 
+:DEFAULT_CASE
  cls
  echo.
  call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
@@ -41,7 +38,6 @@ else (
  call :ColorText 02 "   &&&                                                                    &&& "	  
  call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
  goto menu
- )
 :Temporarios
 RD /S /Q %temp%
 MKDIR %temp%
@@ -71,11 +67,11 @@ del *.log /a /s /q /f
 pause
 cls
 goto menu
-:Activation
+:CASE_2
 @echo.
 @echo    *************************************************************************   
 @echo    ***                                        			         ***        
-@echo    ***                        Windows Activation	       	 		***      
+@echo    ***                        Windows Activation	       	 	 ***      
 @echo    ***                                                                   ***   
 @echo    *************************************************************************         
 @echo.
