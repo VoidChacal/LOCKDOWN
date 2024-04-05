@@ -10,9 +10,9 @@ color 7
 cls
 @echo.
 @echo    *************************************************************************
-@echo    ***                                        			         *** Nota: Por algum motivo meus codigos
-@echo    ***         Bem-Vindo ao Quiz PHP esta pronto pra jogar	       	 ***         para o CMD conhercer os
-@echo    ***                                                                   ***	   caracterios especiais nao esta
+@echo    ***                                        			         *** Nota: Por algum motivo minha linha de comando
+@echo    ***         Bem-Vindo ao Quiz PHP esta pronto pra jogar	       	 ***         para o CMD conhecer os
+@echo    ***                                                                   ***	   caracteres especiais nao esta
 @echo    *************************************************************************	   funcionando.
 @echo.
 call :ColorText 0c "Digite 1 e aperte enter para comecar"
