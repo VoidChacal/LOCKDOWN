@@ -25,6 +25,8 @@ SYSTEMINFO
 TREE
 DEFRAG C:
 CHKDSK /R
+DISM /Online /Cleanup-Image /CheckHealth (POWERSHELL)
+DISM /Online /Cleanup-Image /RestoreHealth (POWERSHELL)
 PERFMON
 SFC /SCANNOW
 NETSTAT
