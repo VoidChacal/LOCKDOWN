@@ -70,13 +70,6 @@ wscript.quit
 if
 elseif
 end if
-----------VARIÁVEIS_EXEMPLOS----------
-A = 97
-B = 71
-----------DECLARAÇÃO----------
-Dim F
-F = (A-B) * 2
-MsgBox "O RESULTADO É: " &F
 ----------CONFIGURAÇÕES_DO_MsgBox----------
 //vbCritical = Ícone de erro
 //vbOKOnly = Apenas o botão OK
@@ -97,3 +90,6 @@ MsgBox "O RESULTADO É: " &F
 //vbIgnore = "Ignore" \\ *5*
 //vbYes	= "Yes" \\ *6*
 //vbNo	= "No" \\ *7*
+==========EXECUTAR==========
+Msconfig
+Msinfo32
