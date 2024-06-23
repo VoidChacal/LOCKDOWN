@@ -25,6 +25,9 @@ SYSTEMINFO
 TREE
 DEFRAG C:
 CHKDSK /R
+DISKPART
+- DISK LIST
+- VOLUME LIST
 DISM /Online /Cleanup-Image /CheckHealth (POWERSHELL)
 DISM /Online /Cleanup-Image /RestoreHealth (POWERSHELL)
 PERFMON
