@@ -1,29 +1,37 @@
 @echo off
+REM ********************************
+REM         Color Function
+REM ********************************
+@echo off
 SETLOCAL EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do rem"') do (
   set "DEL=%%a"
 )
-REM set tempo= time
+REM ********************************
+REM             Menu
+REM ********************************
 :menu
 @echo.
-@echo    *************************************************************************   
-@echo    ***                                        			         ***        %time%
-@echo    ***         		   Multipurpose tools	       	 		 ***      
-@echo    ***                                                                   ***   Aviso: Executar o arquivo 	  
-@echo    *************************************************************************         no modo administrador 
+@echo    *************************************************************************   data: %date%
+@echo    ***                                                                   ***   Horario: %time%
+@echo    ***                         Multipurpose tools                        ***   Aviso: Executar o arquivo    
+@echo    ***                                                                   ***   	  no modo administrador 
+@echo    *************************************************************************         
 @echo.
 call :ColorText 0c "1 Apagar arquivos temporarios"
-call :ColorText 0c "2 Remover fragmentos do disco"
+call :ColorText 0c "2 Opcoes de disco"
 set /p resposta=
-2>NUL CALL :CASE_%resposta%
-if %resposta%==2 ( goto Activation ) 
-if %resposta%==1 ( goto limpeza ) else ( 
-    goto DEFAULT_CASE )
-:CASE_1
+REM 2>NUL CALL :CASE_%resposta%
+if "%resposta%"=="1" ( cls & goto limpeza ) 
+if "%resposta%"=="2" ( cls & goto TEST ) else ( goto DEFAULT_CASE )
+:NAOVENHA
+@echo DENOVO
+pause
+:limpeza
 @echo.
-@echo    *************************************************************************   
-@echo    ***                                        			         ***        %tempo% 
-@echo    ***         Sistema batchfile de limpeza de computadores	       	 ***      
+@echo    *************************************************************************  Data: %date% 
+@echo    ***                                                                   ***  Horario: %time% 
+@echo    ***         Sistema batchfile de limpeza de computadores              ***      
 @echo    ***                                                                   ***   
 @echo    *************************************************************************         
 @echo.
@@ -33,15 +41,9 @@ set /p resposta2=
 if %resposta2%==1 ( goto Temporarios )
 if %resposta2%==2 ( goto menu ) else ( 
     goto DEFAULT_CASE )
-:DEFAULT_CASE
-cls
-echo.
-call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
-call :ColorText 02 "   &&&                                                                    &&& %tempo%"
-call :ColorText 02 "   &&&                         Valor Invalido                             &&& "
-call :ColorText 02 "   &&&                                                                    &&& "	  
-call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
-goto menu
+REM ********************************
+REM        Delete Temp Files
+REM ********************************
 :Temporarios
 RD /S /Q %temp%
 MKDIR %temp%
@@ -51,7 +53,6 @@ RD /S /Q C:\Windows\Temp
 MKDIR C:\Windows\Temp
 takeown /f "C:\Windows\Temp" /r /d y
 takeown /f %temp% /r /d y
-REM parte 2
 cd/
 @echo
 del *.log /a /s /q /f
@@ -60,9 +61,9 @@ net stop UsoSvc
 rd /s /q C:\Windows\SoftwareDistribution
 md C:\Windows\SoftwareDistribution
 @echo.
-@echo    *************************************************************************  
-@echo    ***                                        			         ***        %tempo%
-@echo    ***         		Executando Limpeza Profunda	       	 	 ***      
+@echo    *************************************************************************  Data: %date%
+@echo    ***                                                                   ***  Horario: %time%
+@echo    ***                   Executando Limpeza Avancada                     ***      
 @echo    ***                                                                   ***    	  
 @echo    *************************************************************************  
 @echo.
@@ -71,11 +72,14 @@ del *.log /a /s /q /f
 pause
 cls
 goto menu
-:CASE_2
+REM ********************************
+REM             Disc
+REM ********************************
+:TEST
 @echo.
-@echo    *************************************************************************   
-@echo    ***                                        			         ***        %tempo%
-@echo    ***                        Opcoes de Disco	       	 	 ***      
+@echo    ************************************************************************* Data: %date%  
+@echo    ***                                                                   *** Horario: %time%
+@echo    ***                        Opcoes de Disco                            ***      
 @echo    ***                                                                   ***   
 @echo    *************************************************************************
 @echo.         
@@ -86,14 +90,15 @@ call :ColorText 0c "3 Voltar ao menu"
 set /p resposta3=
 if %resposta3%==1 ( goto Fragments )
 if %resposta3%==2 ( goto checkDisc )
-if %resposta3%==3 ( goto menu) else ( 
+if %resposta3%==3 ( %cls% goto menu ) else ( 
     goto DEFAULT_CASE )
-set key= 
+cls
 :Fragments
 @echo.
-@echo    *************************************************************************  %tempo% 
-@echo    ***                                        			         ***      Exemple: C: or D:  
-@echo    ***                        Digite o disco	       	 	        ***      
+@echo    *************************************************************************  Data: %date%
+@echo    ***                                                                   ***  Horario: %time%    
+@echo    ***                        Digite o disco                             ***      
+@echo    ***                       Exemplo: C: ou D:                           ***
 @echo    ***                                                                   ***   
 @echo    *************************************************************************
 @echo.         
@@ -102,22 +107,32 @@ set /p disc=
 defrag %disc%
 :checkDisck
 @echo.
-@echo    *************************************************************************   
-@echo    ***                                        			         ***      Exemple: C: or D:
-@echo    ***                         Check Disc                 			         ***        
-@echo    ***                        Digite o disco	       	 	        ***      
+@echo    *************************************************************************  Data: %date% 
+@echo    ***                                                                   ***  Horario: %time%
+@echo    ***                         Check Disc                                ***        
+@echo    ***                        Digite o disco                             ***      
+@echo    ***                       Exemple: C: ou D:                           ***
 @echo    ***                                                                   ***   
 @echo    *************************************************************************
 @echo.         
 @echo.
 set /p Chkdisc=
 CHKDSK %Chkdisc%
-:test
-set key=test
-@echo %key%
-REM cscript slmgr.vbs /ipk %key%
-REM cscript slmgr.vbs /skms kms.lotro.cc
-REM cscript slmgr.vbs /ato
+REM ********************************
+REM         Default Case
+REM ********************************
+:DEFAULT_CASE
+cls
+echo.
+call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
+call :ColorText 02 "   &&&                                                                    &&& "
+call :ColorText 02 "   &&&                         Valor Invalido                             &&& "
+call :ColorText 02 "   &&&                                                                    &&& "
+call :ColorText 02 "   &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& "
+goto menu
+REM ********************************
+REM         Color Function
+REM ********************************
 :ColorText
 echo off
 echo %DEL% > "%~2"
