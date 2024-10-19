@@ -1,4 +1,6 @@
 @echo off
+mode 120,30
+Title Multipurpose tools
 REM ********************************
 REM         Color Function
 REM ********************************
@@ -15,7 +17,7 @@ REM ********************************
 @echo    *************************************************************************   data: %date%
 @echo    ***                                                                   ***   Horario: %time%
 @echo    ***                         Multipurpose tools                        ***   Aviso: Executar o arquivo    
-@echo    ***                                                                   ***   	  no modo administrador 
+@echo    ***                                                                   ***   	    no modo administrador 
 @echo    *************************************************************************         
 @echo.
 call :ColorText 0c "1 Apagar arquivos temporarios"
